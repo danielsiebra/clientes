@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160714162314) do
+ActiveRecord::Schema.define(version: 20160715173909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20160714162314) do
     t.string   "vencimento"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "ativo"
   end
 
 end
