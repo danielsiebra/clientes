@@ -1,0 +1,58 @@
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#ativos">Clientes ativos</a></li>
+  <li role="presentation"><a href="#pendentes">Clientes com pendencias</a></li>
+</ul>
+
+<div class="container" id="ativos">
+	<div class="panel">
+		<table class="table">
+			<thead>
+				<th>Nome</th>
+				<th>Telefone</th>
+				<th>Endereço</th>
+				<th>CEP</th>
+				<th>Valor</th>
+				<th>Vencimento</th>
+			</thead>
+			<tbody>
+				<% @ca.each do |p| %>
+				<tr>
+					<td><%= p.nome %></td>
+					<td><%= p.telefone %></td>
+					<td><%= p.endereco %></td>
+					<td><%= p.cep %></td>
+					<td><%= p.valor %></td>
+					<td><%= p.vencimento %></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="container" id="pendentes">
+	<div class="panel">
+		<table class="table">
+			<thead>
+				<th>Nome</th>
+				<th>Telefone</th>
+				<th>Endereço</th>
+				<th>CEP</th>
+				<th>Valor</th>
+				<th>Vencimento</th>
+			</thead>
+			<tbody>
+				<% @ca.each do |p| %>
+				<tr>
+					<td><%= p.nome %></td>
+					<td><%= p.telefone %></td>
+					<td><%= p.endereco %></td>
+					<td><%= p.cep %></td>
+					<td><%= p.valor %></td>
+					<td><%= p.vencimento %></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>

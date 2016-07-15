@@ -1,6 +1,6 @@
 class ClientesController < ApplicationController
 	require 'csv'
-	def self.index
+	def index
 
 	end
 
@@ -31,6 +31,9 @@ class ClientesController < ApplicationController
 		end
 	end
 
-
+	def banco
+		@ca = Cliente.where("ativo= ?", true)
+		@ci = Cliente.where("ativo= ?", false)
+	end
 
 end

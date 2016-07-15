@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     #member do
       get 'index'
       post 'buscar'
+      get 'banco'
     end
   end
 
