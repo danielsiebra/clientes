@@ -1,10 +1,11 @@
-<ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#ativos">Clientes ativos</a></li>
-  <li role="presentation"><a href="#pendentes">Clientes com pendencias</a></li>
-</ul>
+<div class="container"  >
 
-<div class="container" id="ativos">
-	<div class="panel">
+	<ul class="nav nav-tabs">
+	  <li role="navigation" class="active"><a href="#ativos">Clientes ativos</a></li>
+	  <li role="navigation"><a href="#pendentes">Clientes com pendencias</a></li>
+	</ul>
+
+	<div class="panel" id="ativos" name="ativos">
 		<table class="table">
 			<thead>
 				<th>Nome</th>
@@ -28,10 +29,8 @@
 			</tbody>
 		</table>
 	</div>
-</div>
 
-<div class="container" id="pendentes">
-	<div class="panel">
+	<div class="panel" id="pendentes" name="pendentes">
 		<table class="table">
 			<thead>
 				<th>Nome</th>
@@ -42,7 +41,7 @@
 				<th>Vencimento</th>
 			</thead>
 			<tbody>
-				<% @ca.each do |p| %>
+				<% @ci.each do |p| %>
 				<tr>
 					<td><%= p.nome %></td>
 					<td><%= p.telefone %></td>
@@ -55,4 +54,5 @@
 			</tbody>
 		</table>
 	</div>
+
 </div>
