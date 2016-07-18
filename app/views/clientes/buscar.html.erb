@@ -1,3 +1,8 @@
-<h1>Processo concluido!</h1>
+<% if @msg_s %>
+	<%= @msg_s %><br/>
+
+<% else %>
+	<%= @msg_f %><br/>
+<% end %>
 <%= link_to 'Voltar', controller: 'clientes', action: 'index' %>
-<%= link_to 'Ver banco', controller: 'clientes', action: 'banco' %>
+<%= link_to 'Ver banco de dados', controller: 'clientes', action: 'banco' %>

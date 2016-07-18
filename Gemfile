@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'prawn'
+gem 'prawn-table', '~> 0.1.0'
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
