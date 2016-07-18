@@ -1,11 +1,10 @@
-<div class="container"  >
+<ul class="nav nav-tabs" role="tablist">
+	<li role="navigation" class="active"><a href="#ativos" aria-controls="ativos" role="tab" data-toggle="tab">Clientes ativos</a></li>
+	<li role="navigation"><a href="#pendentes" aria-controls="pendentes" role="tab" data-toggle="tab">Clientes com pendencias</a></li>
+</ul>
 
-	<ul class="nav nav-tabs">
-	  <li role="navigation" class="active"><a href="#ativos">Clientes ativos</a></li>
-	  <li role="navigation"><a href="#pendentes">Clientes com pendencias</a></li>
-	</ul>
-
-	<div class="panel" id="ativos" name="ativos">
+<div class="tab-content"  >
+	<div role="tabpanel" class="tab-pane active" id="ativos">
 		<table class="table">
 			<thead>
 				<th>Nome</th>
@@ -30,7 +29,7 @@
 		</table>
 	</div>
 
-	<div class="panel" id="pendentes" name="pendentes">
+	<div role="tabpanel" class="tab-pane" id="pendentes">
 		<table class="table">
 			<thead>
 				<th>Nome</th>
