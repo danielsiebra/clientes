@@ -1,4 +1,5 @@
 class ClientesController < ApplicationController
+	before_action :authenticate_user!
 	require 'csv'
 	def index
 		
