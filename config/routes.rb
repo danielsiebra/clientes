@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   root :to => "clientes#index"
   resources :clientes do
     collection do
-    #member do
       get 'index'
       post 'buscar'
       get 'banco'
