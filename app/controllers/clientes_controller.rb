@@ -1,5 +1,7 @@
 class ClientesController < ApplicationController
 	require 'csv'
+	require 'prawn'
+	require 'prawn/table'
 	def index
 
 	end
@@ -36,4 +38,18 @@ class ClientesController < ApplicationController
 		@ci = Cliente.where("ativo= ?", false)
 	end
 
+	def gerar
+		Prawn::Document.generate("#{Rails.root}/app/assets/images/tabela.pdf") do |pdf|
+			clientes = Cliente.limit(8).each do |cliente|
+				pdf.table  ([
+					 ["#{cliente.nome}\n", 
+					 "#{cliente.telefone}\n",
+				   "#{cliente.endereco}\n",
+				   "#{cliente.cep}\n",
+				   "#{cliente.valor}\n",
+				   "#{cliente.vencimento}\n"]
+				 	])
+			end
+    end	
+	end
 end

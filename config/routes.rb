@@ -5,6 +5,8 @@ Rails.application.routes.draw do
       get 'index'
       post 'buscar'
       get 'banco'
+      get 'gerar'
+      # :action=>"gerar", :controller=>"clientes"
     end
   end
 
