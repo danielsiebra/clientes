@@ -10,7 +10,27 @@
 
 </head>
 <body>
-
+	<div class="navbar navbar-default navbar-fixed-top">
+	    <p class="navbar-text pull left">
+	    	<%= link_to 'Banco de dados', controller: 'clientes', action: 'banco', :class => 'navbar-link' %> |
+    		<%= link_to 'Submeter CSV', controller: 'clientes', action: 'index', :class => 'navbar-link' %> |
+    		<%= link_to 'Gerar PDF', :class => 'navbar-link' %>
+	    </p>
+	    <div class="container">
+    		<p class="navbar-text pull-right">
+	        	<% if user_signed_in? %>
+		          On-line como: <strong><%= current_user.email %></strong>.
+		          <%= link_to 'Editar perfil', edit_user_registration_path, :class => 'navbar-link' %> |
+		          <%= link_to "Sair", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+	        	<% else %>
+		          <%= link_to "Registrar-se", new_user_registration_path, :class => 'navbar-link'  %> |
+		          <%= link_to "Entrar", new_user_session_path, :class => 'navbar-link'  %>
+	        	<% end %>
+      		</p>
+    	</div>
+  	</div>
+	<p class="notice"><%= notice %></p>
+   	<p class="alert"><%= alert %></p>
 <%= yield %>
 
 </body>

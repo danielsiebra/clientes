@@ -1,4 +1,5 @@
 <%= form_for :clientes , :url => {:controller => 'clientes' , :action => 'buscar'} do |f| %>
-	Selecione um arquivo *.csv: <%= f.file_field :nome_arquivo %> 
+	Selecione um arquivo CSV: <%= f.file_field :nome_arquivo %> 
 	<%= f.submit 'Submeter arquivo' %>
 <% end %>
+<%= link_to 'Ver banco de dados', controller: 'clientes', action: 'banco' %>

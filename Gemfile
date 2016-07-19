@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'prawn'
+gem 'prawn-table', '~> 0.1.0'
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -11,8 +14,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
-gem 'prawn'
-gem 'prawn-table', '~> 0.1.2'
 # gem 'wkhtmltopdf-binary'
 # gem 'wicked_pdf'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
